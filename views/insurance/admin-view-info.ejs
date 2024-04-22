@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #87CEEB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .info-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .btn-go-back {
+            background-color: #007bff;
+            color: #fff;
+            margin-right: 10px;
+        }
+        .btn-logout {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info-container">
+            <h2>User Information</h2>
+            <pre><%= JSON.stringify(combinedInfo.userInfo, null, 2) %></pre>
+
+            <h2>Payments Information</h2>
+            <pre><%= JSON.stringify(combinedInfo.paymentsInfo, null, 2) %></pre>
+        </div>
+
+        <form action="/admin-view" method="GET" class="d-inline">
+            <button type="submit" class="btn btn-go-back">Go Back</button>
+        </form>
+
+        <form action="/" method="GET" class="d-inline">
+            <button type="submit" class="btn btn-logout">Logout</button>
+        </form>
+    </div>
+</body>
+</html>

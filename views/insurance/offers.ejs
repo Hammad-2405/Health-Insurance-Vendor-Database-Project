@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tiers</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="stylesheet" href="/public/app.css">
+</head>
+
+<body>
+    <div class="panel">
+
+        <div class="pricing-plan">
+            <img src="/public/icons/icon1.png" alt="" class="pricing-img">
+            <h2 class="pricing-header">National Insurance</h2>
+            <ul class="pricing-features">
+                <li class="pricing-features-item">Health Maintenance Organization</li>
+                <li class="pricing-features-item">Expert Physicians and Medical Specialists</li>
+            </ul>
+            <span class="pricing-price">$400/month</span>
+            <form action="/nationalbuy" method="get">
+                <button type="submit" class="pricing-button is-featured">Buy</button>
+            </form>
+
+        </div>
+
+        <div class="pricing-plan">
+            <img src="/public/icons/icon2.png" alt="" class="pricing-img">
+            <h2 class="pricing-header">Safeguard Insurance</h2>
+            <ul class="pricing-features">
+                <li class="pricing-features-item">Long term insurance, for kids and women</li>
+                <li class="pricing-features-item">One time payment and a rest free year</li>
+            </ul>
+            <span class="pricing-price">$4000/year</span>
+            <form action="/safeguardbuy" method="get">
+                <button type="submit" class="pricing-button is-featured">Buy</button>
+            </form>
+        </div>
+
+        <div class="pricing-plan">
+            <img src="/public/icons/icon3.png" alt="" class="pricing-img">
+            <h2 class="pricing-header">UBI Insurance</h2>
+            <ul class="pricing-features">
+                <li class="pricing-features-item">Exclusive Provider Organization</li>
+                <li class="pricing-features-item">Only for persons of age 18 or above</li>
+            </ul>
+            <span class="pricing-price">$350/month</span>
+            <form action="/ubibuy" method="get">
+                <button type="submit" class="pricing-button is-featured">Buy</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: blueviolet; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background-color: #fff; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 20px; 
+        }
+        label {
+            display: block;
+            text-align: left; 
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3; 
+        }
+        .logout-button {
+            background-color: #dc3545; /* Red button color for logout */
+            color: #fff; /* White text color */
+        }
+        .logout-button:hover {
+            background-color: #bd2130; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/admin/view-info" method="POST">
+            <h1>Admin View</h1>
+
+            <p>
+                <label for="username">Enter username to view information</label>
+                <input id="username" name="username" type="text" placeholder="Username">
+            </p>
+            <p>
+                <button type="submit">View Information</button>
+            </p>
+        </form>
+
+        <form action="/" method="GET">
+            <button type="submit" class="logout-button">Log Out</button>
+        </form>
+    </div>
+</body>
+</html>

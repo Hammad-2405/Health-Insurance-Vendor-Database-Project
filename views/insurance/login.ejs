@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('images/image2.jpg');
+            /*background-color: #ffd3e0; /* Light pink shade */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+
+        .h1 {
+            margin-bottom: 50px;
+        }
+        .container {
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background-color: #fff; /* White box */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+            margin-bottom: 20px; /* Add margin at the bottom of the login form */
+        }
+        label {
+            display: block;
+            text-align: left; /* Align labels to the left */
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3; 
+        }
+
+        .register-button {
+            background-color: #ff7f50; 
+            color: #fff; 
+        }
+        .register-button:hover {
+            background-color: #d55f31; 
+        }
+
+        .admin-button {
+            background-color: blueviolet;
+        }
+        .admin-button:hover {
+            background-color: #05696B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1">Health Insurance Vendor</h1>
+        <form action="/" method="POST">
+            <h2>Log In</h2>
+
+            <% if (typeof errorMessage !== 'undefined') { %>
+                <% console.log('errorMessage:', errorMessage); %>
+                <div class="alert alert-danger" role="alert">
+                    <%= errorMessage %>
+                </div>
+            <% } %>
+
+            <p>
+                <label for="username">Enter username</label>
+                <input id="username" name="username" type="text" placeholder="Username">
+            </p>
+            <p>
+                <label for="password">Enter password</label>
+                <input id="password" name="password" type="password" placeholder="Password">
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+
+        <!-- Separate form for the "Register" button with the new class -->
+        <form action="/register" method="get">
+            <p>
+                <button type="submit" class="register-button">Register</button>
+            </p>
+        </form>
+
+        <form action="/admin" method="get">
+            <p>
+                <button type="submit" class="admin-button">Admin</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!-- due-payment.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Due Payments</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add any additional stylesheets or scripts here -->
+    <style>
+        body {
+            background-color: #ffd3e0; /* Light pink shade */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e91e63; /* Dark pink color for heading */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Due Payments</h1>
+
+        <% if (duePayments.length > 0) { %>
+            <ul>
+                <% duePayments.forEach(payment => { %>
+                    <li><%= payment.Amount_Due %> due on <%= payment.Due_Month %>/<%= payment.Due_Year %></li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No due payments found.</p>
+        <% } %>
+
+        <div class="button-container">
+            <form action="/dash" method="get">
+                <button type="submit" class="btn btn-primary">Go back to Dashboard</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, only needed if you want to use Bootstrap JS features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add any additional scripts as needed -->
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffd3e0; /* Light pink shade */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Welcome to Your Dashboard</h1>
+        <ul class="list-unstyled">
+            <li class="mb-3">
+                <form action="/offers" method="get">
+                    <button type="submit" class="btn btn-primary">Buy Insurance</button>
+                </form>
+            </li>
+            <li class="mb-3">
+                <form action="/due-payment" method="get">
+                    <button type="submit" class="btn btn-primary">Check your due payment</button>
+                </form>
+            </li>
+            <li class="mb-3">
+                <form action="/schedule-visit" method="get">
+                    <button type="submit" class="btn btn-primary">Schedule Visit with Doctor</button>
+                </form>
+            </li>
+            <li class="mb-3">
+                <form action="/delete-account" method="get">
+                    <button type="submit" class="btn btn-warning">Delete Account</button>
+                </form>
+            </li>
+        </ul>
+        <div class="button-container mt-4">
+            <form action="/" method="get">
+                <button type="submit" class="btn btn-danger">Log Out</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
